@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+ <!-- ADMIN TEMPLATE -->
+  <definition name="admin.template" template="/WEB-INF/templates/admin/template.jsp">
+    <put-attribute name="header" value="/WEB-INF/templates/admin/header.jsp" />
+     <put-attribute name="left-bar" value="/WEB-INF/templates/admin/left-bar.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="footer" value="/WEB-INF/templates/admin/footer.jsp" />
+  </definition>
+  
+  <definition name="admin.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/views/admin/index/index.jsp" />
+  </definition>
+   <definition name="admin.cat.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/views/admin/cat/cat.jsp" />
+  </definition>
+   <definition name="admin.cat.add" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/views/admin/cat/add.jsp" />
+  </definition>
+  
+   <definition name="admin.cat.edit" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/views/admin/cat/edit.jsp" />
+  </definition>
+  
+  
+  <!-- End Category -->
+   <definition name="admin.prod.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/views/admin/prod/prod.jsp" />
+  </definition>
+  
+  <definition name="admin.prod.add" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/views/admin/prod/add.jsp" />
+  </definition>
+</tiles-definitions>
